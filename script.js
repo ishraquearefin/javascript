@@ -2,7 +2,7 @@
 //var got=false;
 
 document.getElementById("start").onclick=function start(){
-
+document.getElementById("avg").style.display="none"
 var avg=0;
 var n=0;	
 
@@ -43,8 +43,10 @@ function appeartime(){
 
 document.getElementById("stop").onclick=function(){
   clearTimeout(myvar);
+	document.getElementById("avg").style.display="block"
  
   document.getElementById("avg").innerHTML= "<b>"+"Your average reaction time : " + (avg/n).toFixed(3) +"s" +"</b>"
+document.getElementById("box").style.display="none"
 }
 
 appeartime();
